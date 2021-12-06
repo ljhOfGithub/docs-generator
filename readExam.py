@@ -1,5 +1,27 @@
 import sys
+import re
+def getRepo(self,examFile):
+    #suppose example file is in the examples folders that is essential to use the script.
+    #examFile is a file name
+    importRepo = []
+    with open(examFile,'r') as exam:
+        #recognize the function in exam
+        #split the function body and function name
+        #store the import repo to the 'importRepo' list
+        #suppose all repos are imported by "import *"(*represent the repo name)
+        importPara = []
+        lines = exam.readlines()
+        for line in lines:
+            if "import" in line:
+                    importPara.append(line)
+        importReReg = r'import\s^[A-Za-z0-9]+$' #suppose repo name is combined of letter or underline
+        importRepo = re.match(importPara,importReReg)#get all imported repo
+        
 
-def readExam(self,examFile):#suppose example file is in the examples folders that is essential to use the script.
+def getAnno(self,examFile):
+    annotation = ""
+    
+
+
 
 
