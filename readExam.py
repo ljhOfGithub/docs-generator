@@ -57,6 +57,16 @@ def getFuncPara(self,examFile):
 
 
 
+def combineDoc(self,examFile):
+    funcNames = getFuncName(examFile)
+    funcParas = getFuncPara(examFile)
+    wellLine = getWellLine(examFile)
+    #use some front-end template
+    print("")
+
+
+
+
 
 
 
