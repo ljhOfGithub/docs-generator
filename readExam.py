@@ -18,9 +18,26 @@ def getRepo(self,examFile):
         importRepo = re.match(importPara,importReReg)#get all imported repo
         
 
-def getAnno(self,examFile):
-    annotation = ""
-    
+def getWellLine(self,examFile):
+    with open(examFile,'r') as exam:
+        lines = exam.readlines()
+        wellLine = []
+        for line in lines:#get the line starting with '#'
+            if line.startswith("#")
+                wellLine.append(line)
+        
+    return wellLine
+
+# TODO:get the three-quote lines
+# def getQuoteLine(self,examFile):
+#     with open(examFile,'r') as exam:
+#         lines = exam.readlines()
+#         quoteLine = ""
+#         for line in lines:
+#             if line.startswith()
+
+
+
 
 
 
