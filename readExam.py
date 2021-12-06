@@ -42,8 +42,20 @@ def getFuncName(self,examFile):
         funcNames = []
         for line in lines:
             if line.startswith("def"):
-                funcName = line[4:]
+                funcName = GetMiddleStr(line,'def','(')
                 funcNames.append(funcName)
+        return funcNames
+
+def getFuncPara(self,examFile):
+    with open(examFile,'r') as exam:
+        funcParas = []
+        for line in lines:
+            if line.startswith("def"):
+                funcParaStr =  line.split("(")
+                funcParas = funcParaStr.split(",")
+        return funcParas
+
+
 
 
 
