@@ -37,6 +37,17 @@ def getWellLine(self,examFile):
 #             if line.startswith()
 
 
+def getFuncName(self,examFile):
+    with open(examFile,'r') as exam:
+        funcNames = []
+        for line in lines:
+            if line.startswith("def"):
+                funcName = line[4:]
+                funcNames.append(funcName)
+
+
+
+
 
 
 
